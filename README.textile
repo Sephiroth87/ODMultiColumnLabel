@@ -1,6 +1,6 @@
 h1. ODMultiColumnLabel
 
-http://www.orangeinaday.com/img/ODMultiColumnLabel.jpg
+!http://www.orangeinaday.com/img/ODMultiColumnLabel.jpg!
 
 ODMultiColumnLabel is a UILabel replacement that renders text on multiple columns, without any major hassle
 
@@ -30,7 +30,7 @@ The @ODMultiColumnLabel@ can be customized using the following properties:
 @property (nonatomic, assign) CGFloat columnsSpacing;       // default is 14.0
 </pre>
 
-h2. Known limitation
+h2. Known limitations
 
 Currently, ODMultiColumnLabel works best if the label has no fixed height, either using Autolayout's intrinsic content size or -sizeToFit.
 Forcing a smaller height to the label will currently crop the bottom part
