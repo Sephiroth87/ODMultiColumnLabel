@@ -1,0 +1,322 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		E5317A3D1989B66F00470735 /* ODMultiColumnLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = E5317A3C1989B66F00470735 /* ODMultiColumnLabel.m */; };
+		E5F9CEEF1975DAA200CFED3E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5F9CEEE1975DAA200CFED3E /* Foundation.framework */; };
+		E5F9CEF11975DAA200CFED3E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5F9CEF01975DAA200CFED3E /* CoreGraphics.framework */; };
+		E5F9CEF31975DAA200CFED3E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5F9CEF21975DAA200CFED3E /* UIKit.framework */; };
+		E5F9CEFB1975DAA300CFED3E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E5F9CEFA1975DAA200CFED3E /* main.m */; };
+		E5F9CEFF1975DAA300CFED3E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E5F9CEFE1975DAA300CFED3E /* AppDelegate.m */; };
+		E5F9CF021975DAA300CFED3E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E5F9CF001975DAA300CFED3E /* Main.storyboard */; };
+		E5F9CF051975DAA300CFED3E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E5F9CF041975DAA300CFED3E /* ViewController.m */; };
+		E5F9CF071975DAA300CFED3E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E5F9CF061975DAA300CFED3E /* Images.xcassets */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		E5317A3B1989B66F00470735 /* ODMultiColumnLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ODMultiColumnLabel.h; sourceTree = "<group>"; };
+		E5317A3C1989B66F00470735 /* ODMultiColumnLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ODMultiColumnLabel.m; sourceTree = "<group>"; };
+		E5F9CEEB1975DAA200CFED3E /* ODMultiColumnLabelDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ODMultiColumnLabelDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E5F9CEEE1975DAA200CFED3E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		E5F9CEF01975DAA200CFED3E /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		E5F9CEF21975DAA200CFED3E /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		E5F9CEF61975DAA200CFED3E /* ODMultiColumnLabelDemo-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ODMultiColumnLabelDemo-Info.plist"; sourceTree = "<group>"; };
+		E5F9CEFA1975DAA200CFED3E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		E5F9CEFC1975DAA300CFED3E /* ODMultiColumnLabelDemo-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ODMultiColumnLabelDemo-Prefix.pch"; sourceTree = "<group>"; };
+		E5F9CEFD1975DAA300CFED3E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		E5F9CEFE1975DAA300CFED3E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		E5F9CF011975DAA300CFED3E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		E5F9CF031975DAA300CFED3E /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		E5F9CF041975DAA300CFED3E /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		E5F9CF061975DAA300CFED3E /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		E5F9CF0D1975DAA300CFED3E /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E5F9CEE81975DAA200CFED3E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E5F9CEF11975DAA200CFED3E /* CoreGraphics.framework in Frameworks */,
+				E5F9CEF31975DAA200CFED3E /* UIKit.framework in Frameworks */,
+				E5F9CEEF1975DAA200CFED3E /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		E5317A3A1989B66F00470735 /* ODMultiColumnLabel */ = {
+			isa = PBXGroup;
+			children = (
+				E5317A3B1989B66F00470735 /* ODMultiColumnLabel.h */,
+				E5317A3C1989B66F00470735 /* ODMultiColumnLabel.m */,
+			);
+			name = ODMultiColumnLabel;
+			path = ../../ODMultiColumnLabel;
+			sourceTree = "<group>";
+		};
+		E5F9CEE21975DAA200CFED3E = {
+			isa = PBXGroup;
+			children = (
+				E5F9CEF41975DAA200CFED3E /* ODMultiColumnLabelDemo */,
+				E5F9CEED1975DAA200CFED3E /* Frameworks */,
+				E5F9CEEC1975DAA200CFED3E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		E5F9CEEC1975DAA200CFED3E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E5F9CEEB1975DAA200CFED3E /* ODMultiColumnLabelDemo.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E5F9CEED1975DAA200CFED3E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E5F9CEEE1975DAA200CFED3E /* Foundation.framework */,
+				E5F9CEF01975DAA200CFED3E /* CoreGraphics.framework */,
+				E5F9CEF21975DAA200CFED3E /* UIKit.framework */,
+				E5F9CF0D1975DAA300CFED3E /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E5F9CEF41975DAA200CFED3E /* ODMultiColumnLabelDemo */ = {
+			isa = PBXGroup;
+			children = (
+				E5F9CEFD1975DAA300CFED3E /* AppDelegate.h */,
+				E5F9CEFE1975DAA300CFED3E /* AppDelegate.m */,
+				E5F9CF001975DAA300CFED3E /* Main.storyboard */,
+				E5F9CF031975DAA300CFED3E /* ViewController.h */,
+				E5F9CF041975DAA300CFED3E /* ViewController.m */,
+				E5F9CF061975DAA300CFED3E /* Images.xcassets */,
+				E5F9CEF51975DAA200CFED3E /* Supporting Files */,
+			);
+			path = ODMultiColumnLabelDemo;
+			sourceTree = "<group>";
+		};
+		E5F9CEF51975DAA200CFED3E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				E5317A3A1989B66F00470735 /* ODMultiColumnLabel */,
+				E5F9CEF61975DAA200CFED3E /* ODMultiColumnLabelDemo-Info.plist */,
+				E5F9CEFA1975DAA200CFED3E /* main.m */,
+				E5F9CEFC1975DAA300CFED3E /* ODMultiColumnLabelDemo-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E5F9CEEA1975DAA200CFED3E /* ODMultiColumnLabelDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E5F9CF1D1975DAA300CFED3E /* Build configuration list for PBXNativeTarget "ODMultiColumnLabelDemo" */;
+			buildPhases = (
+				E5F9CEE71975DAA200CFED3E /* Sources */,
+				E5F9CEE81975DAA200CFED3E /* Frameworks */,
+				E5F9CEE91975DAA200CFED3E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ODMultiColumnLabelDemo;
+			productName = ODMultiColumnLabelDemo;
+			productReference = E5F9CEEB1975DAA200CFED3E /* ODMultiColumnLabelDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E5F9CEE31975DAA200CFED3E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = "orange in a day";
+			};
+			buildConfigurationList = E5F9CEE61975DAA200CFED3E /* Build configuration list for PBXProject "ODMultiColumnLabelDemo" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = E5F9CEE21975DAA200CFED3E;
+			productRefGroup = E5F9CEEC1975DAA200CFED3E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E5F9CEEA1975DAA200CFED3E /* ODMultiColumnLabelDemo */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E5F9CEE91975DAA200CFED3E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E5F9CF071975DAA300CFED3E /* Images.xcassets in Resources */,
+				E5F9CF021975DAA300CFED3E /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E5F9CEE71975DAA200CFED3E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E5F9CF051975DAA300CFED3E /* ViewController.m in Sources */,
+				E5F9CEFF1975DAA300CFED3E /* AppDelegate.m in Sources */,
+				E5F9CEFB1975DAA300CFED3E /* main.m in Sources */,
+				E5317A3D1989B66F00470735 /* ODMultiColumnLabel.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		E5F9CF001975DAA300CFED3E /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E5F9CF011975DAA300CFED3E /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		E5F9CF1B1975DAA300CFED3E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		E5F9CF1C1975DAA300CFED3E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		E5F9CF1E1975DAA300CFED3E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ODMultiColumnLabelDemo/ODMultiColumnLabelDemo-Prefix.pch";
+				INFOPLIST_FILE = "ODMultiColumnLabelDemo/ODMultiColumnLabelDemo-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		E5F9CF1F1975DAA300CFED3E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ODMultiColumnLabelDemo/ODMultiColumnLabelDemo-Prefix.pch";
+				INFOPLIST_FILE = "ODMultiColumnLabelDemo/ODMultiColumnLabelDemo-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E5F9CEE61975DAA200CFED3E /* Build configuration list for PBXProject "ODMultiColumnLabelDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E5F9CF1B1975DAA300CFED3E /* Debug */,
+				E5F9CF1C1975DAA300CFED3E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E5F9CF1D1975DAA300CFED3E /* Build configuration list for PBXNativeTarget "ODMultiColumnLabelDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E5F9CF1E1975DAA300CFED3E /* Debug */,
+				E5F9CF1F1975DAA300CFED3E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = E5F9CEE31975DAA200CFED3E /* Project object */;
+}

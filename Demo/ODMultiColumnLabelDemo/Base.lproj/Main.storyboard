@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="vXZ-lx-hvc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label appearanceType="aqua" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="280" translatesAutoresizingMaskIntoConstraints="NO" id="gu4-qZ-69l" customClass="ODMultiColumnLabel">
+                                <rect key="frame" x="20" y="20" width="280" height="20"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <slider appearanceType="aqua" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="NOb-Ey-9uI">
+                                <rect key="frame" x="18" y="48" width="284" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="numberOfColumnsSliderValueChanged:" destination="vXZ-lx-hvc" eventType="valueChanged" id="2wJ-hj-Le8"/>
+                                </connections>
+                            </slider>
+                            <slider appearanceType="aqua" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="403-i3-Pci">
+                                <rect key="frame" x="18" y="86" width="284" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="5CB-uG-aU0"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="columnsSpacingSliderValueChanged:" destination="vXZ-lx-hvc" eventType="valueChanged" id="fQD-dO-3Ea"/>
+                                </connections>
+                            </slider>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="403-i3-Pci" secondAttribute="trailing" constant="20" id="0pT-YD-gYk"/>
+                            <constraint firstItem="403-i3-Pci" firstAttribute="top" secondItem="NOb-Ey-9uI" secondAttribute="bottom" constant="8" id="7Sr-Z9-5Om"/>
+                            <constraint firstItem="403-i3-Pci" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="20" id="EoC-d8-JYi"/>
+                            <constraint firstItem="NOb-Ey-9uI" firstAttribute="top" secondItem="gu4-qZ-69l" secondAttribute="bottom" constant="8" id="KtK-rR-Kvh"/>
+                            <constraint firstItem="403-i3-Pci" firstAttribute="top" secondItem="NOb-Ey-9uI" secondAttribute="bottom" constant="8" id="Mar-kp-naZ"/>
+                            <constraint firstAttribute="trailing" secondItem="gu4-qZ-69l" secondAttribute="trailing" constant="20" id="OCi-su-ppO"/>
+                            <constraint firstItem="gu4-qZ-69l" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="20" id="Uba-Zb-EWe"/>
+                            <constraint firstAttribute="trailing" secondItem="NOb-Ey-9uI" secondAttribute="trailing" constant="20" id="Wch-1t-Smn"/>
+                            <constraint firstItem="NOb-Ey-9uI" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="20" id="fc4-29-3QG"/>
+                            <constraint firstItem="gu4-qZ-69l" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" id="y4n-Dt-dHs"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="label" destination="gu4-qZ-69l" id="aMI-tj-j7U"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>

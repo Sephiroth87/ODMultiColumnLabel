@@ -1,0 +1,40 @@
+h1. ODMultiColumnLabel
+
+http://www.orangeinaday.com/img/ODMultiColumnLabel.jpg
+
+ODMultiColumnLabel is a UILabel replacement that renders text on multiple columns, without any major hassle
+
+h2. Requirements
+
+Since it's based on TextKit, ODMultiColumnLabel requires iOS 7.0 or greater
+
+h2. Installation
+
+__*Important note if your project doesn't use ARC*: you must add the @-fobjc-arc@ compiler flag to @ODMultiColumnLabel.m@ in Target Settings > Build Phases > Compile Sources.__
+
+* Drag the @ODMultiColumnLabel/ODMultiColumnLabel@ folder into your project. 
+* @#import "ODMultiColumnLabel.h"@
+
+h2. Usage
+
+(see sample Xcode project in @/Demo@)
+
+Create the label as normal, via code or Interface Builder
+
+h3. Customization
+
+The @ODMultiColumnLabel@ can be customized using the following properties:
+
+<pre>
+@property (nonatomic, assign) NSUInteger numberOfColumns;   // default is 1
+@property (nonatomic, assign) CGFloat columnsSpacing;       // default is 14.0
+</pre>
+
+h2. Known limitation
+
+Currently, ODMultiColumnLabel works best if the label has no fixed height, either using Autolayout's intrinsic content size or -sizeToFit.
+Forcing a smaller height to the label will currently crop the bottom part
+
+h2. Credits
+
+ODMultiColumnLabel is brought to you by "Fabio Ritrovato":http://orangeinaday.com and "contributors to the project":https://github.com/Sephiroth87/ODMultiColumnLabel/contributors. If you have feature suggestions or bug reports, feel free to help out by sending pull requests or by "creating new issues":https://github.com/Sephiroth87/ODMultiColumnLabel/issues/new. If you're using ODMultiColumnLabel in your project, attribution would be nice.
