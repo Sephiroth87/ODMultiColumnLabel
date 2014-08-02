@@ -10,10 +10,16 @@ Since it's based on TextKit, ODMultiColumnLabel requires iOS 7.0 or greater
 
 h2. Installation
 
+h4. Objective-C
+
 __*Important note if your project doesn't use ARC*: you must add the @-fobjc-arc@ compiler flag to @ODMultiColumnLabel.m@ in Target Settings > Build Phases > Compile Sources.__
 
-* Drag the @ODMultiColumnLabel/ODMultiColumnLabel@ folder into your project. 
+* Drag @ODMultiColumnLabel.h@ and @ODMultiColumnLabel.m@ from the @ODMultiColumnLabel@ folder into your project
 * @#import "ODMultiColumnLabel.h"@
+
+h4. Swift
+
+* Drag @ODMultiColumnLabel.swift@ from the @ODMultiColumnLabel@ folder into your project
 
 h2. Usage
 
@@ -23,17 +29,27 @@ Create the label as normal, via code or Interface Builder
 
 h3. Customization
 
-The @ODMultiColumnLabel@ can be customized using the following properties:
+The @ODMultiColumnLabel@ can be customized using all normal UILabel properties, using normal or attributed strings, plus the following properties:
+
+h4. Objective-C
 
 <pre>
 @property (nonatomic, assign) NSUInteger numberOfColumns;   // default is 1
 @property (nonatomic, assign) CGFloat columnsSpacing;       // default is 14.0
 </pre>
 
+h4. Swift
+
+<pre>
+var numberOfColumns: UInt = 2
+var columnsSpacing: CGFloat = 14.0
+</pre>
+
 h2. Known limitations
 
-Currently, ODMultiColumnLabel works best if the label has no fixed height, either using Autolayout's intrinsic content size or -sizeToFit.
-Forcing a smaller height to the label will currently crop the bottom part
+* Currently, ODMultiColumnLabel works best if the label has no fixed height, either using Autolayout's intrinsic content size or -sizeToFit. Forcing a smaller height to the label will currently crop the bottom part
+* lineBreakMode is currently ignored, partially for the reason above, but also because there seems to be a bug with NSLayoutManager
+* Doesn't seem to work great with unified Storyboards and class sizes, but I don't knowwhose fault it is yet
 
 h2. Credits
 
