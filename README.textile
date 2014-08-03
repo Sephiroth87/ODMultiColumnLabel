@@ -2,7 +2,7 @@ h1. ODMultiColumnLabel
 
 !http://www.orangeinaday.com/img/ODMultiColumnLabel.jpg!
 
-ODMultiColumnLabel is a UILabel replacement that renders text on multiple columns, without any major hassle
+ODMultiColumnLabel is a UILabel replacement that renders text on multiple columns, without any major hassle, available in both Objective-C and Swift
 
 h2. Requirements
 
