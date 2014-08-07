@@ -21,7 +21,7 @@
 		E5E44315198AFF8A00B48180 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		E5E44318198AFF8A00B48180 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E5E4431A198AFF8A00B48180 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		E5E44334198B004900B48180 /* ODMultiColumnLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ODMultiColumnLabel.swift; path = ODMultiColumnLabel/ODMultiColumnLabel.swift; sourceTree = "<group>"; };
+		E5E44334198B004900B48180 /* ODMultiColumnLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ODMultiColumnLabel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,7 +78,7 @@
 				E5E44334198B004900B48180 /* ODMultiColumnLabel.swift */,
 			);
 			name = ODMultiColumnLabel;
-			path = ../../../ODMultiColumnLabel;
+			path = ../../ODMultiColumnLabel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
