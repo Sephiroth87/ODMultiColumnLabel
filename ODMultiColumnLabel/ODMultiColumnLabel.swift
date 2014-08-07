@@ -28,7 +28,7 @@ class ODMultiColumnLabel: UILabel {
     override var lineBreakMode: NSLineBreakMode { didSet { updateText() } }
     override var attributedText: NSAttributedString! { didSet { updateText() } }
 
-    init(frame: CGRect) {
+    override init(frame: CGRect) {
         textStorage = NSTextStorage()
         multicolumnManager = NSLayoutManager()
         singleColumnManager = NSLayoutManager()
@@ -36,7 +36,7 @@ class ODMultiColumnLabel: UILabel {
         commonInit()
     }
     
-    init(coder aDecoder: NSCoder!) {
+    required init(coder aDecoder: NSCoder!) {
         textStorage = NSTextStorage()
         multicolumnManager = NSLayoutManager()
         singleColumnManager = NSLayoutManager()
