@@ -36,7 +36,7 @@ class ODMultiColumnLabel: UILabel {
         commonInit()
     }
     
-    required init(coder aDecoder: NSCoder!) {
+    required init(coder aDecoder: NSCoder) {
         textStorage = NSTextStorage()
         multicolumnManager = NSLayoutManager()
         singleColumnManager = NSLayoutManager()
