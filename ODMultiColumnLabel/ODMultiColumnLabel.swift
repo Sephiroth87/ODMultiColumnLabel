@@ -79,7 +79,7 @@ class ODMultiColumnLabel: UILabel {
             string.addAttributes(attrs, range: range)
             if range.location == 0 {
                 if let paragraph = attrs[NSParagraphStyleAttributeName] as? NSParagraphStyle {
-                    var newParagraph = paragraph.mutableCopy() as NSMutableParagraphStyle
+                    var newParagraph = paragraph.mutableCopy() as! NSMutableParagraphStyle
                     // Same as above
                     newParagraph.lineBreakMode = .ByWordWrapping
                     string.addAttribute(NSParagraphStyleAttributeName, value: newParagraph, range: range)
@@ -88,9 +88,9 @@ class ODMultiColumnLabel: UILabel {
         }
         textStorage.setAttributedString(string)
         
-        let columnWidth = (frame.width - CGFloat(max(0, numberOfColumns - 1.0)) * columnsSpacing) / CGFloat(numberOfColumns)
+        let columnWidth = (frame.width - CGFloat(max(0, Int(numberOfColumns) - 1)) * columnsSpacing) / CGFloat(numberOfColumns)
         
-        let singlecolumnContainer = singleColumnManager.textContainers[0] as NSTextContainer
+        let singlecolumnContainer = singleColumnManager.textContainers[0] as! NSTextContainer
         singlecolumnContainer.size = CGSize(width: columnWidth, height: CGFloat.max)
         singleColumnManager.glyphRangeForTextContainer(singlecolumnContainer)
 
@@ -114,7 +114,7 @@ class ODMultiColumnLabel: UILabel {
             }
         }
      
-        for container in multicolumnManager.textContainers as [NSTextContainer] {
+        for container in multicolumnManager.textContainers as! [NSTextContainer] {
             container.size = CGSize(width: CGFloat(columnWidth), height: columnHeight)
         }
         
@@ -125,8 +125,8 @@ class ODMultiColumnLabel: UILabel {
     // MARK: - Drawing
     
     override func drawRect(rect: CGRect) {
-        let columnWidth = (frame.width - CGFloat(max(0, numberOfColumns - 1.0)) * columnsSpacing) / CGFloat(numberOfColumns)
-        for (index, container) in enumerate(multicolumnManager.textContainers as [NSTextContainer]) {
+        let columnWidth = (frame.width - CGFloat(max(0, Int(numberOfColumns) - 1)) * columnsSpacing) / CGFloat(numberOfColumns)
+        for (index, container) in enumerate(multicolumnManager.textContainers as! [NSTextContainer]) {
             let containerOrigin = CGPoint(x: CGFloat(index) * (columnWidth + columnsSpacing), y: 0.0)
             let containerRange = multicolumnManager.glyphRangeForTextContainer(container)
             multicolumnManager.drawBackgroundForGlyphRange(containerRange, atPoint: containerOrigin)
@@ -147,7 +147,7 @@ class ODMultiColumnLabel: UILabel {
     
     override func sizeThatFits(size: CGSize) -> CGSize {
         var height: CGFloat = 0.0
-        for container in multicolumnManager.textContainers as [NSTextContainer] {
+        for container in multicolumnManager.textContainers as! [NSTextContainer] {
             height = max(height, multicolumnManager.usedRectForTextContainer(container).height)
         }
         return CGSize(width: size.width, height: height)
