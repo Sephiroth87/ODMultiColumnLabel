@@ -49,7 +49,6 @@ h2. Known limitations
 
 * Currently, ODMultiColumnLabel works best if the label has no fixed height, either using Autolayout's intrinsic content size or -sizeToFit. Forcing a smaller height to the label will currently crop the bottom part
 * lineBreakMode is currently ignored, partially for the reason above, but also because there seems to be a bug with NSLayoutManager
-* Doesn't seem to work great with unified Storyboards and class sizes, but I don't knowwhose fault it is yet
 
 h2. Credits
 
