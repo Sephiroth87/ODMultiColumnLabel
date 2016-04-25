@@ -36,7 +36,7 @@ class ODMultiColumnLabel: UILabel {
         commonInit()
     }
     
-    required init(coder aDecoder: NSCoder) {
+    required init?(coder aDecoder: NSCoder!) {
         textStorage = NSTextStorage()
         multicolumnManager = NSLayoutManager()
         singleColumnManager = NSLayoutManager()
@@ -75,14 +75,13 @@ class ODMultiColumnLabel: UILabel {
         ]
         var string = NSMutableAttributedString(string: text, attributes: attributes)
         // Copy existing attributes, we do it after because they may override the label default values
-        attributedText.enumerateAttributesInRange(NSRange(location: 0, length: attributedText.length), options: nil) { (attrs, range, stop) in
+        attributedText.enumerateAttributesInRange(NSRange(location: 0, length: attributedText.length), options: []) { (attrs, range, stop) in
             string.addAttributes(attrs, range: range)
             if range.location == 0 {
-                if let paragraph = attrs[NSParagraphStyleAttributeName] as? NSParagraphStyle {
-                    var newParagraph = paragraph.mutableCopy() as! NSMutableParagraphStyle
+                if var paragraph = attrs[NSParagraphStyleAttributeName] as? NSMutableParagraphStyle {
                     // Same as above
-                    newParagraph.lineBreakMode = .ByWordWrapping
-                    string.addAttribute(NSParagraphStyleAttributeName, value: newParagraph, range: range)
+                    paragraph.lineBreakMode = .ByWordWrapping
+                    string.addAttribute(NSParagraphStyleAttributeName, value: paragraph, range: range)
                 }
             }
         }
@@ -90,7 +89,7 @@ class ODMultiColumnLabel: UILabel {
         
         let columnWidth = (frame.width - CGFloat(max(0, Int(numberOfColumns) - 1)) * columnsSpacing) / CGFloat(numberOfColumns)
         
-        let singlecolumnContainer = singleColumnManager.textContainers[0] as! NSTextContainer
+        let singlecolumnContainer = singleColumnManager.textContainers[0] as NSTextContainer
         singlecolumnContainer.size = CGSize(width: columnWidth, height: CGFloat.max)
         singleColumnManager.glyphRangeForTextContainer(singlecolumnContainer)
 
@@ -105,7 +104,7 @@ class ODMultiColumnLabel: UILabel {
 
         while multicolumnManager.textContainers.count != Int(numberOfColumns) {
             if multicolumnManager.textContainers.count < Int(numberOfColumns) {
-                let container = NSTextContainer(size: CGSize.zeroSize)
+                let container = NSTextContainer(size: CGSize.zero)
                 container.lineFragmentPadding = 0.0
                 multicolumnManager.addTextContainer(container)
                 multicolumnManager.glyphRangeForTextContainer(container)
@@ -114,7 +113,7 @@ class ODMultiColumnLabel: UILabel {
             }
         }
      
-        for container in multicolumnManager.textContainers as! [NSTextContainer] {
+        for container in multicolumnManager.textContainers as [NSTextContainer] {
             container.size = CGSize(width: CGFloat(columnWidth), height: columnHeight)
         }
         
@@ -126,7 +125,7 @@ class ODMultiColumnLabel: UILabel {
     
     override func drawRect(rect: CGRect) {
         let columnWidth = (frame.width - CGFloat(max(0, Int(numberOfColumns) - 1)) * columnsSpacing) / CGFloat(numberOfColumns)
-        for (index, container) in enumerate(multicolumnManager.textContainers as! [NSTextContainer]) {
+        for (index, container) in (multicolumnManager.textContainers as [NSTextContainer]).enumerate() {
             let containerOrigin = CGPoint(x: CGFloat(index) * (columnWidth + columnsSpacing), y: 0.0)
             let containerRange = multicolumnManager.glyphRangeForTextContainer(container)
             multicolumnManager.drawBackgroundForGlyphRange(containerRange, atPoint: containerOrigin)
@@ -147,7 +146,7 @@ class ODMultiColumnLabel: UILabel {
     
     override func sizeThatFits(size: CGSize) -> CGSize {
         var height: CGFloat = 0.0
-        for container in multicolumnManager.textContainers as! [NSTextContainer] {
+        for container in multicolumnManager.textContainers as [NSTextContainer] {
             height = max(height, multicolumnManager.usedRectForTextContainer(container).height)
         }
         return CGSize(width: size.width, height: height)
