@@ -12,7 +12,7 @@
 
 @interface ODMultiColumnLabel : UILabel
 
-@property (nonatomic, assign) NSUInteger numberOfColumns;   // default is 1
-@property (nonatomic, assign) CGFloat columnsSpacing;       // default is 14.0
+@property (nonatomic, assign) IBInspectable NSUInteger numberOfColumns;   // default is 1
+@property (nonatomic, assign) IBInspectable CGFloat columnsSpacing;       // default is 14.0
 
 @end
