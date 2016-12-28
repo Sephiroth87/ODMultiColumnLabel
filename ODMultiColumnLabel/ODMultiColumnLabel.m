@@ -165,8 +165,10 @@
 
 - (void)setNumberOfColumns:(NSUInteger)numberOfColumns
 {
-    _numberOfColumns = numberOfColumns;
-    [self updateText];
+    if (_numberOfColumns != numberOfColumns) {
+        _numberOfColumns = numberOfColumns;
+        [self updateText];
+    }
 }
 
 - (void)setColumnsSpacing:(CGFloat)columnsSpacing
