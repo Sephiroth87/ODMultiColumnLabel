@@ -59,7 +59,7 @@
 
 - (void)updateText
 {
-    if (!self.text) {
+    if (!self.text || !_multicolumnManager) {
         return;
     }
     
