@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name     = 'ODMultiColumnLabel'
-  s.version  = '1.0'
+  s.version  = '1.1'
   s.license  = 'MIT'
   s.summary  = "A UILabel replacement that renders text on multiple columns, comes in both Objective-C and Swift versions"
   s.homepage = 'https://github.com/Sephiroth87/ODMultiColumnLabel'

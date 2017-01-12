@@ -59,7 +59,7 @@
 
 - (void)updateText
 {
-    if (!self.text) {
+    if (!self.text || !_multicolumnManager) {
         return;
     }
     
@@ -165,8 +165,10 @@
 
 - (void)setNumberOfColumns:(NSUInteger)numberOfColumns
 {
-    _numberOfColumns = numberOfColumns;
-    [self updateText];
+    if (_numberOfColumns != numberOfColumns) {
+        _numberOfColumns = numberOfColumns;
+        [self updateText];
+    }
 }
 
 - (void)setColumnsSpacing:(CGFloat)columnsSpacing
